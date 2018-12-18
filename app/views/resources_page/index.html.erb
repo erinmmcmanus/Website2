@@ -1,0 +1,158 @@
+<style>
+	body {
+		font-family: "Helvetica", sans-serif;
+	}
+
+	.header {
+		background-color: #595a5b;
+		top: 0;
+		width: 100%;
+		text-align: center;
+		font-family: "Gill Sans", sans-serif;
+
+	}
+	
+	.header li {
+		display: inline-block;
+		margin-right: 25px;
+		text-align: center;
+	}
+
+	.header a {
+		display: block;
+		padding: 30px 20px;
+		color: white;
+		font-size: 30px;
+		text-decoration: none;
+	}
+
+	.header a:visted {
+		text-decoration: none;
+		color: inherit;
+	}
+
+	.topnav {
+		overflow: hidden;
+		background-color: #262626;
+		text-align: center;
+		margin: 0;
+		padding: 15px;
+	}
+
+	.topnav a {
+  		display: inline-block;
+  		color: white;
+  		text-align: center;
+  		padding: 14px 16px;
+  		text-decoration: none;
+  		width: 14.29%;
+  		font-size: 25px
+	}
+
+	.topnav a:hover {
+ 		background-color: #595a5b;
+  		color: white;
+	}
+
+
+	.resources h2 {
+		font-size: 32px;
+	}
+
+	.resources a {
+		text-decoration: none;
+		color: black;
+	}
+
+	.resources a:visted {
+		color: inherit;
+	}
+
+	.resources a:hover {
+		color: gray;
+	}
+
+	.row, .row2{
+		padding: 10px;
+		height: 250px;
+	}
+
+	.row2 {
+		background-color: #f1f1f1;
+	}
+
+
+</style>
+<body>
+
+<div class = 'header'>
+	<ul>
+		<li><%= link_to'Home', controller: 'welcome' %></li>
+		<li><%= link_to 'Profiles', controller: 'profiles' %></li>
+		<li><%= link_to 'Resources', controller: 'resources_page' %></a></li>
+		<li><%= link_to'About', controller: 'about' %></li>
+	</ul>
+</div>
+
+
+<div class = "topnav">
+	<a href = #math>Math</a>
+	<a href = #science>Science</a>
+	<a href = #english>English</a>
+	<a href = #history>History</a>
+	<a href = #foreign-language>Foreign Language</a>
+	<a href = #standardized-test>Standardized Tests</a>
+</div>
+
+<div class = "resources">
+	<div class = "row">
+		<h2><a id ='math'>Math</a></h2>
+			<p><a href="https://www.coolmathgames.com/">Cool Math Games</a></p>
+			<p><a href="https://www.khanacademy.org/math">Khan Academy</a></p>
+			<p><a href="https://www.brainpop.com/math/">Brain Pop</a></p>
+			<p><a href="https://www.desmos.com/">Desmos</a></p>
+			<p><a href="https://www.geogebra.org/">Geogebra</a></p>
+	</div>
+
+	<div class = "row2">
+		<h2><a id='science'>Science</a></h2>
+			<p><a href="https://www.physicsclassroom.com/">Physics Classroom</a></p>
+			<p><a href="https://www.khanacademy.org/science">Khan Academy</a></p>
+			<p><a href="http://www.apphysicslectures.com/">AP Physics Lectures</a></p>
+	</div>
+
+	<div class = "row">
+		<h2><a id='english'>English</a></h2>
+			<p><a href="https://www.youtube.com/watch?v=MSYw502dJNY&list=PL8dPuuaLjXtOeEc9ME62zTfqc0h6Pe8vb">Crash course</a></p>
+			<p><a href="https://www.vocabulary.com/">Vocabulary.com</a></p>
+			<p><a href="https://owl.purdue.edu/owl/purdue_owl.html">Purdue Writing labs</a></p>
+	</div>
+
+	<div class = "row2">
+		<h2><a id='history'>History</a></h2>
+			<p><a href="https://www.getafive.com/ap-tests">Get a Five</a></p>
+			<p><a href="https://www.khanacademy.org/humanities/us-history">Khan Academy US History</a></p>
+			<p><a href="https://www.youtube.com/watch?v=Yocja_N5s1I&list=PLBDA2E52FB1EF80C9">Crash Course world history</a></p>
+			<p><a href="http://www.ushistory.org/navigation/resources.html">US history</a></p>
+			<p><a href="http://www.ushistory.org/us/">US History</a></p>
+	</div>
+
+	<div class = "row">
+		<h2><a id='foreign-language'>Foreign Language</a></h2>
+			<p><a href="https://www.vhlcentral.com/">VHL</a></p>
+			<p><a href="https://www.duolingo.com/">Duolingo</a></p>
+			<p><a href="https://studyspanish.com/">Study Spanish</a></p>
+			<p><a href="http://www.spanishdict.com/">SpanishDict</a></p>
+	</div>
+
+	<div class = "row2">
+		<h2><a id = "standardized-test">Standardized Tests</a></h2>
+			<p><a href="http://www.act.org/content/act/en/products-and-services/the-act/test-preparation/math-practice-test-questions.html?page=0&chapter=0">ACT Practice Tests</a></p>
+			<p><a href="https://collegereadiness.collegeboard.org/pdf/sat-practice-test-1.pdf">SAT Practice Tests</a></p>
+			<p><a href="https://getcollegecredit.com/blog/article/8_tips_to_help_you_pass_a_standardized_test">Study Tips</a></p>
+	</div>
+</div>
+
+</body>
+
+

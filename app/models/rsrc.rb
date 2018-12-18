@@ -1,0 +1,3 @@
+class Rsrc < ApplicationRecord
+	
+end

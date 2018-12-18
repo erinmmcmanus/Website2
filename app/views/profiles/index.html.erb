@@ -1,0 +1,107 @@
+<style>
+
+.header {
+    background-color: #595a5b;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    font-family: "Gill Sans", sans-serif;
+
+  }
+  
+  .header li {
+    display: inline-block;
+    margin-right: 25px;
+    text-align: center;
+  }
+
+  .header a {
+    display: block;
+    padding: 30px 20px;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+  }
+
+  .header a:visted {
+    text-decoration: none;
+    color: inherit;
+  }
+
+h1 {
+  text-align: center;
+}
+
+#create {
+  text-align: center;
+}
+
+#create a {
+  color: black;
+  text-decoration: none;
+}
+
+#create a:hover {
+  color: white;
+}
+
+#create a:visited {
+  color: inherit;
+}
+.all_profiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 10px;
+}
+
+.profile {
+  border: 1px solid black;
+  padding: 20px;
+  text-align: center;
+  margin: 10px;
+}
+
+.profile a {
+  font-size: 15px;
+  color: gray;
+  text-decoration: none;
+}
+
+</style>
+
+<div class = 'header'>
+  <ul>
+    <li><%= link_to'Home', controller: 'welcome' %></li>
+    <li><%= link_to 'Profiles', controller: 'profiles' %></li>
+    <li><%= link_to 'Resources', controller: 'resources_page' %></a></li>
+    <li><%= link_to'About', controller: 'about' %></li>
+  </ul>
+</div>
+
+<h1>Tutor Profiles</h1>
+
+<div id='create'>
+  <%= link_to 'New Profile', new_profile_path %>
+</div>
+
+ 
+ <div class = 'all_profiles'>
+  <% @profiles.each do |profile| %>
+    <div class = 'profile' >
+      <h2><%= profile.flname %></h2>
+      <h2><%= profile.subjects %></h2>
+       <h2><%= link_to 'Show', profile_path(profile) %>
+      <!--
+      <h2><%= profile.age %></h2>
+      <h2><%= profile.phonenumber %></h2>
+      <h2><%= profile.email %></h2>
+      <h2><%= profile.experience %></h2>
+      <h2><%= link_to 'Show', profile_path(profile) %></h2>
+      <h2><%= link_to 'Edit', edit_profile_path(profile) %></h2>
+      <h2><%= link_to 'Destroy', profile_path(profile),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></h2>
+      -->
+    </div>
+  <% end %>
+</div>
